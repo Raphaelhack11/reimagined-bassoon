@@ -1,0 +1,184 @@
+/* ======== GiveBridge Donation Page ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f8fafc, #eef2f7);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #2b2d42;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #6b7280;
+}
+
+/* Container */
+.container {
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.campaign h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.campaign p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Donation Section */
+.donation-section h3 {
+  margin-top: 20px;
+  color: #1e293b;
+}
+
+/* IMPROVEMENT: Use CSS Grid for better button layout */
+.amount-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  margin: 10px 0 15px;
+}
+
+.amount {
+  padding: 8px 15px;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  background: #f0f9ff;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Fill grid cell */
+}
+
+.amount:hover,
+.amount.active {
+  background: #3b82f6;
+  color: white;
+}
+
+#customAmount {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* IMPROVEMENT: Add focus visibility for radio buttons */
+.methods label {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.methods label:focus-within {
+  outline: 2px solid #3b82f6; 
+  outline-offset: 2px;
+}
+
+#donateBtn {
+  background: #10b981;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+#donateBtn:hover {
+  background: #059669;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* IMPROVEMENT: Ensure the modal is on top */
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#confirmPaid {
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#confirmPaid:hover {
+  background: #1d4ed8;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
