@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GiveBridge - Donate to Help</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>GiveBridge</h1>
+    <p>One campaign • Simple, secure donations</p>
+  </header>
+
+  <main class="container">
+    <section class="campaign">
+      <h2>Help Families in Need</h2>
+      <p>
+        Your donation helps provide food, essential supplies, and temporary
+        shelter to families affected by the floods.
+      </p>
+
+      <div class="donation-section">
+        <h3>Choose Amount</h3>
+        <div class="amount-buttons">
+          <button class="amount" data-value="5" type="button">$5</button>
+          <button class="amount" data-value="10" type="button">$10</button>
+          <button class="amount" data-value="25" type="button">$25</button>
+          <button class="amount" data-value="50" type="button">$50</button>
+          <button class="amount" data-value="100" type="button">$100</button>
+        </div>
+
+        <input
+          type="number"
+          id="customAmount"
+          placeholder="Or enter custom amount ($)"
+          min="1"
+          aria-label="Custom donation amount in US dollars"
+        />
+
+        <h3>Payment Method</h3>
+        <div class="methods">
+          <label>
+            <input type="radio" name="method" value="paypal" checked />
+            PayPal (@pamelaGeworsky)
+          </label>
+          <label>
+            <input type="radio" name="method" value="bitcoin" />
+            Bitcoin (bc1q4c6f7xzsekkpvd2guwkaww4m7se9yjlrxnrjc7)
+          </label>
+        </div>
+
+        <button id="donateBtn">Donate</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="paymentModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h3>Complete Your Donation</h3>
+      <p>
+        Please send <strong id="modalAmount"></strong> to the wallet or PayPal account below:
+      </p>
+      <div id="paymentDetails"></div>
+      <button id="confirmPaid">I Paid — Confirm</button>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> GiveBridge. Built with care.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
